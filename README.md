@@ -1,4 +1,4 @@
-# Learning JVMTI \[Status : In-Progress... Date@ 05 March 2017\] 
+# Learning JVMTI \[Status : In-Progress...\] 
 
 ## Building native agent for JVM
 

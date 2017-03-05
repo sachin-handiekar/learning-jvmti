@@ -28,7 +28,7 @@ The book will cover the following topics -
 
 **Leanpub**
 
-* Coming Soon...
+* [https://leanpub.com/learning-jvmti](https://leanpub.com/learning-jvmti)
 
 **Amazon Kindle **
 

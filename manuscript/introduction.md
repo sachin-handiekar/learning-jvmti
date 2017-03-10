@@ -8,27 +8,17 @@ JVMTI is a two-way interface it provides the agent \(the client of JVMTI API\) w
 
 Native agents run in the same process and communicate directly with the JVM they are being executed. The native in-process interface allows maximal control with minimal intrusion on the part of a tool.
 
-
-
 ## Developing Native Agents using JVMTI API
 
 JVMTI Agents can be develop in any native language which supports C language calling conventions
 
-The function, event, data type, and constant definitions needed for using JVMTI are defined in the include filejvmti.h, which can be found in the %JAVA\_HOME%/include directory. To use this include file add the JDK Include directory path to the include path and add the following line to the source code –
+The function, event, data type, and constant definitions needed for using JVMTI are defined in the include file `jvmti.h`, which can be found in the `%JAVA_HOME%/include` directory. To use this include file add the JDK Include directory path to the include path and add the following line to the source code –
 
-\#include &lt;jvmti.h&gt;
-
-
+`#include <jvmti.h>`
 
 Below are some examples showing the usage of include path in the build script -
 
-
-
 **MAKE**
 
-
-
 **CMAKE**
-
- 
 

@@ -20,17 +20,13 @@ Below are some examples showing the usage of include path in the build script -
 
 **Make**
 
-GCC
-
-
-
-G++
-
-
+```
+gcc -c -o example.o -I"%JAVA_HOME%\include" -I"%JAVA_HOME%\include\win32"  example.c
+```
 
 **CMAKE**
 
-The easiest option for adding the jvmti.h header file in a cmake build script is to add the JNI package. As both jni.h and jvmti.h lives in the same folder. 
+The easiest option for adding the jvmti.h header file in a cmake build script is to add the JNI package. As both jni.h and jvmti.h lives in the same folder.
 
 ```
 find_package(JNI)
@@ -39,12 +35,6 @@ if (JNI_FOUND)
     message (STATUS "JNI_LIBRARIES=${JNI_LIBRARIES}")
 endif()
 ```
-
-
-
-
-
-
 
 
 

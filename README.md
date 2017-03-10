@@ -1,8 +1,8 @@
-# Learning JVMTI \[Status : In-Progress...\] 
+# Learning JVMTI \[Status : In-Progress...\]
 
 ## Building native agent for JVM
 
-This book will cover how we can build native agents using the JVM Tool Interface API which comes with the JDK. We will be using the JVMTI version 1.2.1 which is the latest at the time of writing this book.
+This book will cover how we can build native agents using the JVM Tool Interface \(JVMTI\) API which comes with the JDK. We will be using the JVMTI version 1.2.1 which is the latest at the time of writing this book.
 
 The book will cover the following topics -
 
@@ -36,6 +36,6 @@ The book will cover the following topics -
 
 ---
 
-![](/assets/import.png)  
-This work is licensed under a [Creative commons Attribution-NonCommercial CC BY-NC](https://creativecommons.org/licenses/by-nc/4.0)
+![](/assets/import.png\)  
+This work is licensed under a [Creative commons Attribution-NonCommercial CC BY-NC]\(https://creativecommons.org/licenses/by-nc/4.0)
 

@@ -1,5 +1,6 @@
 # Summary
 
+* [README](README.md)
 * [Intended Audience](manuscript/intended-audience.md)
 * [Development Tools](manuscript/development-tools.md)
 * [Introduction](manuscript/introduction.md)
@@ -8,6 +9,5 @@
 * [JVMTI Callbacks](manuscript/jvmti-callbacks.md)
 * [Debugging JVMTI Agent](manuscript/debugging-jvmti-agent.md)
 * [JVMTI Examples](manuscript/jvmti-examples.md)
-* [References](manuscript/references.md) 
-
+* [References](manuscript/references.md)
 

@@ -18,7 +18,33 @@ The function, event, data type, and constant definitions needed for using JVMTI 
 
 Below are some examples showing the usage of include path in the build script -
 
-**MAKE**
+**Make**
+
+GCC
+
+
+
+G++
+
+
 
 **CMAKE**
+
+The easiest option for adding the jvmti.h header file in a cmake build script is to add the JNI package. As both jni.h and jvmti.h lives in the same folder. 
+
+```
+find_package(JNI)
+if (JNI_FOUND)
+    message (STATUS "JNI_INCLUDE_DIRS=${JNI_INCLUDE_DIRS}")
+    message (STATUS "JNI_LIBRARIES=${JNI_LIBRARIES}")
+endif()
+```
+
+
+
+
+
+
+
+
 

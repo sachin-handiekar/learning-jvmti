@@ -61,7 +61,8 @@ If the agent is started during the OnLoad phase, the agent must have the followi
 
 
 ```
-JNIEXPORT jint JNICALL Agent_OnLoad(JavaVM *vm, char *options, void *reserved)
+JNIEXPORT jint JNICALL 
+Agent_OnLoad(JavaVM *vm, char *options, void *reserved)
 ```
 
 This method will get called very early in the JVM initialization, we can expect the following to occur before the methods gets called - 
@@ -76,11 +77,43 @@ This method will get called very early in the JVM initialization, we can expect 
 
 **Agent_OnAttach**
 
+A VM may support a mechanism that allows agents to be started in the VM during the live phase. The details of how this is supported, are implementation specific. For example, a tool may use some platform specific mechanism, or implementation specific API, to attach to the running VM, and request it start a given agent.
+
+If an agent is started during the live phase then its agent library must export a start-up function with the following prototype:
+
+
+```
+
+JNIEXPORT jint JNICALL 
+Agent_OnAttach(JavaVM* vm, char *options, void *reserved)
+```
+
+
+
+The VM will start the agent by calling this function. It will be called in the context of a thread that is attached to the VM. The first argument <vm> is the Java VM. The <options> argument is the startup options provided to the agent. <options> is encoded as a modified UTF-8 string. If startup options were not provided, a zero length string is passed to options. The lifespan of the options string is the Agent_OnAttach call. If needed beyond this time the string or parts of the string must be copied.
+
+Note that some capabilities may not be available in the live phase.
+
+The Agent_OnAttach function initializes the agent and returns a value to the VM to indicate if an error occurred. Any value other than zero indicates an error. An error does not cause the VM to terminate. Instead the VM ignores the error, or takes some implementation specific action -- for example it might print an error to standard error, or record the error in a system log.
+
 
 
 **Agent OnUnload**
 
+The library may optionally export a shutdown function with the following prototype:
 
+
+```
+JNIEXPORT void JNICALL Agent_OnUnload(JavaVM *vm)
+
+```
+
+
+This function will be called by the VM when the library is about to be unloaded. The library will be unloaded and this function will be called if some platform specific mechanism causes the unload (an unload mechanism is not specified in this document) or the library is (in effect) unloaded by the termination of the VM whether through normal termination or VM failure, including start-up failure. Uncontrolled shutdown is, of couse, an exception to this rule. 
+
+Note the distinction between this function and the VM Death event: for the VM Death event to be sent, the VM must have run at least to the point of initialization and a valid JVM TI environment must exist which has set a callback for VMDeath and enabled the event None of these are required for Agent_OnUnload and this function is also called if the library is unloaded for other reasons. 
+
+In the case that a VM Death event is sent, it will be sent before this function is called (assuming this function is called due to VM termination). This function can be used to clean-up resources allocated by the agent.
 
 
 

@@ -6,5 +6,6 @@ jvmti-events.md
 jvmti-callbacks.md
 debugging-jvmti-agent.md
 jvmti-examples.md
+jni-crash-course.md
 references.md
 

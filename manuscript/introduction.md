@@ -55,6 +55,32 @@ The path following -agentpath: is the absolute path from which to load the libra
 The entry point for dynamic agent shared library is the `Agent_OnLoad` method which gets used during the OnLoad phase. There is another approach by which agents can be attached on a running JVM (Live phase) in which case the `Agent_OnAttach` method gets used.
 
 
+**Agent_OnLoad**
+
+If the agent is started during the OnLoad phase, the agent must have the following method signature - 
+
+
+```
+JNIEXPORT jint JNICALL Agent_OnLoad(JavaVM *vm, char *options, void *reserved)
+```
+
+This method will get called very early in the JVM initialization, we can expect the following to occur before the methods gets called - 
+
+* System Properties may have been setup before the start-up of the VM
+* Full set of capabilitites may be available (Please refer to each capabilities for more details)
+* No bytecodes have been executed
+* No Classes have been loaded
+* No Objects have been created
+ 
+
+
+**Agent_OnAttach**
+
+
+
+**Agent OnUnload**
+
+
 
 
 

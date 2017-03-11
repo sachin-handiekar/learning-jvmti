@@ -9,7 +9,7 @@
 * [JVMTI Callbacks](manuscript/jvmti-callbacks.md)
 * [Debugging JVMTI Agent](manuscript/debugging-jvmti-agent.md)
 * [JVMTI Examples](manuscript/jvmti-examples.md)
-* [JNI Crash Course] (manuscript/jni-crash-course.md)
+* [JNI Crash Course](manuscript/jni-crash-course.md)
 * [References](manuscript/references.md)
 
 

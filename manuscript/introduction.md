@@ -2,7 +2,7 @@
 
 ## What is JVM Tool Interface \(JVMTI\)?
 
-The JVMTool Interface \(JVMTI\) is an API used for creating development and monitoring tools. It provides us with a way to inspect the state and to control the execution on an application in the JVM.
+The JVM Tool Interface \(JVMTI\) is an API used for creating development and monitoring tools. It provides us with a way to inspect the state and to control the execution on an application in the JVM.
 
 JVMTI is a two-way interface it provides the agent \(the client of JVMTI API\) with notification of important event occurrences. And we can also query and control the application throught the various functions provided by the API.
 

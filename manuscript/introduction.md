@@ -52,7 +52,7 @@ The name following -agentlib: is the name of the native library to load. Lookup 
 
 The path following -agentpath: is the absolute path from which to load the library. No library name expansion will occur. The &lt;options&gt; will be passed to the agent on start-up. For example, if the option -agentpath:c:\myLibs\foo.dll=opt1,opt2 is specified, the VM will attempt to load the shared library c:\myLibs\foo.dll. If the agent library is statically linked into the executable then no actual loading takes place.
 
-
+The entry point for dynamic agent shared library is the `Agent_OnLoad` method which gets used during the OnLoad phase. There is another approach by which agents can be attached on a running JVM (Live phase) in which case the `Agent_OnAttach` method gets used.
 
 
 

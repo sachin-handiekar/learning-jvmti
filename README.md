@@ -8,7 +8,7 @@ This book will cover how we can build native agents using the JVM Tool Interface
 
 ### **Download a .pdf, .epub, or .mobi file from**:
 
-### **Gitbook**
+**Gitbook**
 
 * [https://www.gitbook.com/book/sachin-handiekar/learning-jvmti/details](https://www.gitbook.com/book/sachin-handiekar/learning-jvmti/details)
 
@@ -25,10 +25,4 @@ This book will cover how we can build native agents using the JVM Tool Interface
 ### Contributions
 
 You can contribute to the book, by sending Pull Request on the GitHub Repository - [https://github.com/sachin-handiekar/learning-jvmti](https://github.com/sachin-handiekar/learning-jvmti)
-
-
-
-
-
-
 

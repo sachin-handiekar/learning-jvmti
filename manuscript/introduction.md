@@ -44,7 +44,7 @@ The native agents are compiled and build as a dynamic library which can be then 
 
 * ` -agentlib:<agent-lib-name>=<options>`
 
-The name following -agentlib: is the name of the native library to load. Lookup of the library, both its full name and location, proceeds in a platform-specific manner. Typically, the &lt;agent-lib-name&gt; is expanded to an operating system specific file name. The &lt;options&gt; will be passed to the agent on start-up. For example, if the option -agentlib:foo=opt1,opt2 is specified, the VM will attempt to load the shared library foo.dll from the system PATH under WindowsTM or libfoo.so from the LD\_LIBRARY\_PATH under the SolarisTM operating environment. If the agent library is statically linked into the executable then no actual loading takes place.
+The name following -agentlib: is the name of the native library to load. Lookup of the library, both its full name and location, proceeds in a platform-specific manner. Typically, the &lt;agent-lib-name&gt; is expanded to an operating system specific file name. The &lt;options&gt; will be passed to the agent on start-up. For example, if the option -agentlib:foo=opt1,opt2 is specified, the VM will attempt to load the shared library foo.dll from the system PATH under Windows or libfoo.so from the LD\_LIBRARY\_PATH under the SolarisTM operating environment. If the agent library is statically linked into the executable then no actual loading takes place.
 
 
 

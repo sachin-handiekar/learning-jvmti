@@ -1,6 +1,6 @@
-# JVMTI Examples
+# JVMTI Cookbook
 
-A collection of working JVMTI Examples - 
+A collection of working JVMTI Examples -
 
 ## Hello JVMTI Agent
 
@@ -52,8 +52,6 @@ Output :
 I'm inside main()
 I'm a native Agent....
 ```
-
-
 
 
 

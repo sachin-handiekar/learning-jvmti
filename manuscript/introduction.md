@@ -14,7 +14,9 @@ JVMTI Agents can be develop in any native language which supports C language cal
 
 The function, event, data type, and constant definitions needed for using JVMTI are defined in the include file `jvmti.h`, which can be found in the `%JAVA_HOME%/include` directory. To use this include file add the JDK Include directory path to the include path and add the following line to the source code –
 
-`#include <jvmti.h>`
+```c
+#include <jvmti.h>
+```
 
 Below are some examples showing the usage of include path in the build script -
 
@@ -60,7 +62,7 @@ The entry point for dynamic agent shared library is the `Agent_OnLoad` method wh
 If the agent is started during the OnLoad phase, the agent must have the following method signature - 
 
 
-```
+```c
 JNIEXPORT jint JNICALL 
 Agent_OnLoad(JavaVM *vm, char *options, void *reserved)
 ```
@@ -82,8 +84,7 @@ A VM may support a mechanism that allows agents to be started in the VM during t
 If an agent is started during the live phase then its agent library must export a start-up function with the following prototype:
 
 
-```
-
+```c
 JNIEXPORT jint JNICALL 
 Agent_OnAttach(JavaVM* vm, char *options, void *reserved)
 ```
@@ -103,7 +104,7 @@ The Agent_OnAttach function initializes the agent and returns a value to the VM 
 The library may optionally export a shutdown function with the following prototype:
 
 
-```
+```c
 JNIEXPORT void JNICALL Agent_OnUnload(JavaVM *vm)
 
 ```
